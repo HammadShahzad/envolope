@@ -22,7 +22,7 @@
             justify-content: center;
             align-items: center;
             font-family: sans-serif;
-            background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-floral-wallpaper_52683-67104.jpg');
+            background-image: url('pics/desktop-background.jpeg'); /* Desktop background */
             background-size: cover;
             background-position: center;
         }
@@ -86,7 +86,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://marketplace.canva.com/EAF5ckQLPlQ/1/0/900w/canva-pink-white-watercolor-floral-instagram-story-background-1P2cYYQ3wEE.jpg');
+            background-image: url('pics/desktop-invitation.jpeg'); /* Desktop invitation image */
             background-size: cover;
             background-position: top;
             border-radius: 15px;
@@ -118,7 +118,7 @@
             height: 100%;
         }
 
-        /* Styling for the text with new font */
+        /* Styling for the text with the Playfair Display font */
         .text {
             position: absolute;
             bottom: 20px;
@@ -129,14 +129,18 @@
             z-index: 5;
         }
 
+        /* Mobile view: Adjust sizes and use different images */
         @media (max-width: 768px) {
+            body {
+                background-image: url('pics/mobile-background.jpeg'); /* Mobile background image */
+            }
+
             .wrapper {
                 width: 60vw;
                 height: calc(60vw * 2 / 3);
             }
 
-            .lid,
-            .envelope {
+            .lid {
                 border-right: calc(60vw / 2) solid transparent;
                 border-bottom: calc(60vw / 3) solid transparent;
                 border-left: calc(60vw / 2) solid transparent;
@@ -156,6 +160,10 @@
                 border-left: calc(60vw / 2) solid #8AB979;
             }
 
+            .image {
+                background-image: url('pics/mobile-invitation.jpeg'); /* Mobile invitation image */
+            }
+
             .text {
                 font-size: 1.2rem; /* Adjust font size for mobile */
             }
@@ -168,7 +176,7 @@
         <div class="lid two"></div>
         <div class="envelope"></div>
         <div class="image">
-            <a href="https://marketplace.canva.com/EAFUFiGX5ek/1/0/1600w/canva-colorful-watercolor-floral-linktree-background-qRHfsd-4Nmc.jpg" target="_blank" aria-label="View floral watercolor image"></a>
+            <a href="pics/mobile-invitation.jpeg" target="_blank" aria-label="View invitation image"></a> <!-- Fixed link to open the invitation -->
         </div>
         <div class="text">Click here to see your invitation</div>
     </div>
