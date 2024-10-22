@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Envelope with Clickable Image Reveal</title>
+    
+    <!-- Link to Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -30,8 +34,10 @@
             position: relative;
             display: flex;
             justify-content: center;
+            align-items: center;
             z-index: 0;
             cursor: pointer;
+            text-align: center;
         }
 
         .lid {
@@ -112,6 +118,17 @@
             height: 100%;
         }
 
+        /* Styling for the text with new font */
+        .text {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            z-index: 5;
+        }
+
         @media (max-width: 768px) {
             .wrapper {
                 width: 60vw;
@@ -138,6 +155,10 @@
                 border-bottom: calc(60vw / 3) solid #8AB979;
                 border-left: calc(60vw / 2) solid #8AB979;
             }
+
+            .text {
+                font-size: 1.2rem; /* Adjust font size for mobile */
+            }
         }
     </style>
 </head>
@@ -149,6 +170,7 @@
         <div class="image">
             <a href="https://marketplace.canva.com/EAFUFiGX5ek/1/0/1600w/canva-colorful-watercolor-floral-linktree-background-qRHfsd-4Nmc.jpg" target="_blank" aria-label="View floral watercolor image"></a>
         </div>
+        <div class="text">Click here to see your invitation</div>
     </div>
 
     <script>
