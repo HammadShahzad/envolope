@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Invitation</title>
     
-    <!-- Link to Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
     <style>
@@ -47,6 +46,28 @@
             color: #4C704B;
         }
 
+        /* Styling the button */
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-family: Arial, sans-serif; /* Font similar to the image */
+            color: white;
+            background-color: #365d3a; /* Dark green background */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: 0.05em; /* Slight spacing between letters */
+            text-transform: uppercase; /* All caps to match the style */
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+        }
+
+        .button:hover {
+            background-color: #2b4c2e; /* Darker green on hover */
+        }
+
         /* Mobile view */
         @media (max-width: 768px) {
             .invitation-container {
@@ -57,8 +78,12 @@
 </head>
 <body>
     <div class="invitation-container">
+        <!-- Display the invitation image -->
         <img class="invitation-image" src="/Pics/desktop-invitation.jpeg" alt="Invitation Image">
         <div class="text">You're Invited!</div>
+
+        <!-- Button linking to the scan.html page -->
+        <a href="scan.html" class="button">Scan to R.S.V.P</a> <!-- This button links to the new scan.html page -->
     </div>
 </body>
 </html>
