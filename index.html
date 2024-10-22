@@ -174,7 +174,8 @@
     </style>
 </head>
 <body>
-    <a href="invitation.html" aria-label="View invitation page">
+    <!-- Use JavaScript to delay navigation -->
+    <a href="javascript:void(0);" aria-label="View invitation page" onclick="openInvitation()">
         <div class="wrapper">
             <div class="lid one"></div>
             <div class="lid two"></div>
@@ -183,5 +184,15 @@
             <div class="text">Click here to see your invitation</div>
         </div>
     </a>
+
+    <script>
+        function openInvitation() {
+            document.querySelector('.wrapper').classList.add('open');
+            // Delay for 2 seconds before navigating to invitation.html
+            setTimeout(function() {
+                window.location.href = "invitation.html";
+            }, 2000);  // 2 seconds delay
+        }
+    </script>
 </body>
 </html>
