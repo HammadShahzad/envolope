@@ -22,9 +22,10 @@
             justify-content: center;
             align-items: center;
             font-family: sans-serif;
-            background-image: url('/pics/desktop-background.jpeg'); /* Desktop background */
-            background-size: cover;
+            background-image: url('/pics/desktop-background.jpeg'); /* Elegant background */
+            background-size: cover;    /* Ensures background covers the viewport */
             background-position: center;
+            background-repeat: no-repeat; /* Prevents repeating */
         }
 
         .wrapper {
@@ -36,8 +37,8 @@
             justify-content: center;
             align-items: center;
             z-index: 0;
-            cursor: pointer;
             text-align: center;
+            cursor: pointer; /* Indicating it's clickable */
         }
 
         .lid {
@@ -133,6 +134,9 @@
         @media (max-width: 768px) {
             body {
                 background-image: url('/pics/mobile-background.jpeg'); /* Mobile background image */
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
             }
 
             .wrapper {
@@ -171,16 +175,16 @@
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="lid one"></div>
-        <div class="lid two"></div>
-        <div class="envelope"></div>
-        <div class="image">
-            <!-- Navigate to invitation.html when clicked -->
-            <a href="invitation.html" aria-label="View invitation page"></a> 
+    <!-- Make the whole card clickable by wrapping the .wrapper inside the <a> tag -->
+    <a href="invitation.html" aria-label="View invitation page">
+        <div class="wrapper">
+            <div class="lid one"></div>
+            <div class="lid two"></div>
+            <div class="envelope"></div>
+            <div class="image"></div>
+            <div class="text">Click here to see your invitation</div>
         </div>
-        <div class="text">Click here to see your invitation</div>
-    </div>
+    </a>
 
     <script>
         // Add click functionality for touch screens
