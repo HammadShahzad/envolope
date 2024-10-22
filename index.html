@@ -22,7 +22,7 @@
             justify-content: center;
             align-items: center;
             font-family: sans-serif;
-            background-image: url('pics/desktop-background.jpeg'); /* Desktop background */
+            background-image: url('/pics/desktop-background.jpeg'); /* Desktop background */
             background-size: cover;
             background-position: center;
         }
@@ -86,7 +86,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url('pics/desktop-invitation.jpeg'); /* Desktop invitation image */
+            background-image: url('/pics/desktop-invitation.jpeg'); /* Desktop invitation image */
             background-size: cover;
             background-position: top;
             border-radius: 15px;
@@ -132,7 +132,7 @@
         /* Mobile view: Adjust sizes and use different images */
         @media (max-width: 768px) {
             body {
-                background-image: url('pics/mobile-background.jpeg'); /* Mobile background image */
+                background-image: url('/pics/mobile-background.jpeg'); /* Mobile background image */
             }
 
             .wrapper {
@@ -161,7 +161,7 @@
             }
 
             .image {
-                background-image: url('pics/mobile-invitation.jpeg'); /* Mobile invitation image */
+                background-image: url('/pics/mobile-invitation.jpeg'); /* Mobile invitation image */
             }
 
             .text {
@@ -176,7 +176,8 @@
         <div class="lid two"></div>
         <div class="envelope"></div>
         <div class="image">
-            <a href="pics/mobile-invitation.jpeg" target="_blank" aria-label="View invitation image"></a> <!-- Fixed link to open the invitation -->
+            <!-- Navigate to invitation.html when clicked -->
+            <a href="invitation.html" aria-label="View invitation page"></a> 
         </div>
         <div class="text">Click here to see your invitation</div>
     </div>
