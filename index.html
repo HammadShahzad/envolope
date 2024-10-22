@@ -22,10 +22,10 @@
             justify-content: center;
             align-items: center;
             font-family: sans-serif;
-            background-image: url('/pics/desktop-background.jpeg'); /* Elegant background */
-            background-size: cover;    /* Ensures background covers the viewport */
+            background-image: url('/Pics/desktop-background.jpeg'); /* Use 'Pics' instead of 'pics' */
+            background-size: cover;    
             background-position: center;
-            background-repeat: no-repeat; /* Prevents repeating */
+            background-repeat: no-repeat;
         }
 
         .wrapper {
@@ -38,7 +38,7 @@
             align-items: center;
             z-index: 0;
             text-align: center;
-            cursor: pointer; /* Indicating it's clickable */
+            cursor: pointer;
         }
 
         .lid {
@@ -87,7 +87,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/pics/desktop-invitation.jpeg'); /* Desktop invitation image */
+            background-image: url('/Pics/desktop-invitation.jpeg'); /* Use 'Pics' instead of 'pics' */
             background-size: cover;
             background-position: top;
             border-radius: 15px;
@@ -119,7 +119,6 @@
             height: 100%;
         }
 
-        /* Styling for the text with the Playfair Display font */
         .text {
             position: absolute;
             bottom: 20px;
@@ -130,10 +129,10 @@
             z-index: 5;
         }
 
-        /* Mobile view: Adjust sizes and use different images */
+        /* Mobile view */
         @media (max-width: 768px) {
             body {
-                background-image: url('/pics/mobile-background.jpeg'); /* Mobile background image */
+                background-image: url('/Pics/mobile-background.jpeg'); /* Use 'Pics' instead of 'pics' */
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -165,17 +164,16 @@
             }
 
             .image {
-                background-image: url('/pics/mobile-invitation.jpeg'); /* Mobile invitation image */
+                background-image: url('/Pics/mobile-invitation.jpeg'); /* Use 'Pics' instead of 'pics' */
             }
 
             .text {
-                font-size: 1.2rem; /* Adjust font size for mobile */
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Make the whole card clickable by wrapping the .wrapper inside the <a> tag -->
     <a href="invitation.html" aria-label="View invitation page">
         <div class="wrapper">
             <div class="lid one"></div>
@@ -185,12 +183,5 @@
             <div class="text">Click here to see your invitation</div>
         </div>
     </a>
-
-    <script>
-        // Add click functionality for touch screens
-        document.querySelector('.wrapper').addEventListener('click', function() {
-            this.classList.toggle('open');
-        });
-    </script>
 </body>
 </html>
