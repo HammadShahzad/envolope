@@ -31,12 +31,40 @@
             border-radius: 10px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+            position: relative;
+        }
+
+        /* Back button styling */
+        .back-button {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: -40px;
+            left: 0;
+            padding: 10px;
+            font-size: 1rem;
+            color: #365d3a;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        .back-button svg {
+            margin-right: 5px;
+            width: 16px;
+            height: 16px;
         }
 
         .scan-image {
             width: 100%;
             height: auto;
-            object-fit: contain; /* Ensures the image scales correctly while maintaining aspect ratio */
+            object-fit: contain;
             margin-bottom: 15px;
             border-radius: 8px;
         }
@@ -63,9 +91,18 @@
 </head>
 <body>
     <div class="scan-container">
-        <!-- Display the QR code image  -->
+        <!-- Back button -->
+        <a href="invitation.html" class="back-button">
+            <!-- SVG back arrow icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back
+        </a>
+
+        <!-- Display the QR code image -->
         <img class="scan-image" src="/Pics/scan.jpeg" alt="Scan to R.S.V.P Image">
-        <div class="text">Scan to R.S.V.P</div> 
+        <div class="text">Scan to R.S.V.P</div>
     </div>
 </body>
 </html>
